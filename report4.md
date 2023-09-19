@@ -1,14 +1,14 @@
 ## Задание №5 19.09.2023
 №1
-
 ```sql
 SELECT person.id, person.name, "age", "gender", "address", pizzeria.id, pizzeria.name, "rating" FROM "person", "pizzeria"
-ORDER BY pizzeria.id ASC;
+ORDER BY pizzeria.id ASC;;
 ```
 ![image](https://github.com/DzhigaDzhiga/-/assets/144116592/e18321bd-cb29-438c-b3d8-e01a514d21e1)
 
-№3
+№2
 ```sql
-SELECT person.id, person.name, "age", "gender", "address", pizzeria.id, pizzeria.name, "rating" FROM "person", "pizzeria"
-ORDER BY pizzeria.id ASC;
+SELECT "order_date" AS action_date, "name" FROM "person_order", "person"
+WHERE "order_date" IN (SELECT "visit_date" FROM "person_visits") AND person_order.person_id = person.id
+ORDER BY "order_date" ASC;
 ```
