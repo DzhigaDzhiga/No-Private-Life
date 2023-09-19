@@ -1,4 +1,4 @@
-## Задание №5 19.09.2023
+## Задание №5 19.09.2023 uioiyoiyoiuyh
 №1
 ```sql
 SELECT person.id, person.name, "age", "gender", "address", pizzeria.id, pizzeria.name, "rating" FROM "person", "pizzeria"
