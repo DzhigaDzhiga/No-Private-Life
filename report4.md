@@ -25,6 +25,7 @@ SELECT "order_date" AS action_date, "name" FROM "person_order", "person"
 WHERE "order_date" IN (SELECT "visit_date" FROM "person_visits") AND person_order.person_id = person.id
 ORDER BY "name" DESC;
 ```
+![image](https://github.com/DzhigaDzhiga/-/assets/144116592/5c0169aa-edaf-40ef-8141-32b2f8da7d9a)
 
 ## Задание №6 20.09.2023
 №1
