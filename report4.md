@@ -35,6 +35,13 @@ ORDER BY "order_date" ASC, "person_information" ASC;
 ```
 ![image](https://github.com/DzhigaDzhiga/-/assets/144116592/2493fb1e-19e6-49a6-9493-f89e9e648b6e)
 
+№4
+```sql
+SELECT "order_date", ("name" || ' (age:' || "age" || ')') AS person_information FROM "person_order" NATURAL JOIN "person"
+ORDER BY "order_date" ASC, "person_information" ASC;
+```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/fe00065a-fbb0-4fe3-9b39-8f070b1741e4)
+
 
 ## Задание №6 20.09.2023
 №1
