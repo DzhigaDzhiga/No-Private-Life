@@ -20,3 +20,5 @@ ORDER BY "order_date" ASC;
 ```
 ![image](https://github.com/DzhigaDzhiga/-/assets/144116592/eb89b9e4-4139-4d63-bf79-04664ef25571)
 
+## Задание №6 20.09.2023
+№1
