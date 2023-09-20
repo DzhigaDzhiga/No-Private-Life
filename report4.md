@@ -27,6 +27,15 @@ ORDER BY "name" DESC;
 ```
 ![image](https://github.com/DzhigaDzhiga/-/assets/144116592/5c0169aa-edaf-40ef-8141-32b2f8da7d9a)
 
+№3
+```sql
+SELECT "order_date", ("name" || ' (age:' || "age" || ')') AS person_information FROM "person_order"
+JOIN "person" ON "person_id" = person.id
+ORDER BY "order_date" ASC, "person_information" ASC;
+```
+![image](https://github.com/DzhigaDzhiga/-/assets/144116592/2493fb1e-19e6-49a6-9493-f89e9e648b6e)
+
+
 ## Задание №6 20.09.2023
 №1
 ```sql
