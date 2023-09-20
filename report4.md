@@ -2,7 +2,7 @@
 №1
 ```sql
 SELECT person.id, person.name, "age", "gender", "address", pizzeria.id, pizzeria.name, "rating" FROM "person", "pizzeria"
-ORDER BY pizzeria.id ASC;
+ORDER BY person.id ASC;
 ```
 ![image](https://github.com/DzhigaDzhiga/-/assets/144116592/58207d3c-7e40-4688-b76f-97dbcbe6d769)
 
