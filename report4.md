@@ -43,6 +43,13 @@ ORDER BY "order_date" ASC, "person_information" ASC;
 ![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/fe00065a-fbb0-4fe3-9b39-8f070b1741e4)
 
 ### №5
+```sql
+SELECT "name" FROM "pizzeria"
+WHERE "id" NOT IN
+(SELECT "pizzeria_id" FROM "person_visits");
+```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/8271141f-8000-4590-883f-9620f9ccaa15)
+
 
 ## Задание №6 20.09.2023
 ### №1
