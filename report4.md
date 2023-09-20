@@ -22,3 +22,6 @@ ORDER BY "order_date" ASC;
 
 ## Задание №6 20.09.2023
 №1
+```sql
+
+```
