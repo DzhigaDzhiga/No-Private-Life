@@ -37,8 +37,8 @@ ORDER BY "order_date" ASC, "person_information" ASC;
 
 ### №4
 ```sql
-SELECT "order_date", ("name" || ' (age:' || "age" || ')') AS person_information FROM "person_order" NATURAL JOIN "person"
-ORDER BY "order_date" ASC, "person_information" ASC;
+SELECT order_date, (name || ' (age:' || age || ')') AS person_information FROM person_order NATURAL JOIN person
+ORDER BY order_date ASC, person_information ASC;
 ```
 ![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/fe00065a-fbb0-4fe3-9b39-8f070b1741e4)
 
