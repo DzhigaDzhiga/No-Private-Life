@@ -16,11 +16,29 @@ FROM students WHERE age > 21;
 ```sql
 SELECT coursename FROM courses;
 ```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/56ef62b2-7988-40a1-b735-0b22f1c05f23)
 
 
 ### Вывести имена и фамилии студентов, которые учатся на курсе "Математика"
 ```sql
-SELECT firstname, lastname 
-FROM students WHERE age > 21;
+SELECT firstname, lastname FROM students
+JOIN studentcourses ON studentcourses.studentid = students.studentid
+WHERE courseid = (SELECT courseid FROM courses WHERE coursename = 'Математика');
 ```
-![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/3c6879c0-91b3-46fc-92a7-ce6b0e781326)
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/0a7a2bb2-0ed4-42e3-b17b-e30a3d08fcd5)
+
+###  Вывести имена и фамилии студентов, возраст которых составляет 20 лет, и которые учатся на курсе "История"
+```sql
+SELECT firstname, lastname FROM students
+JOIN studentcourses ON studentcourses.studentid = students.studentid
+WHERE courseid = (SELECT courseid FROM courses WHERE coursename = 'История') AND age = 20;
+```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/5a55b3e5-17b9-4431-944b-de126093d573)
+
+###   Вывести количество студентов на каждом курсе
+```sql
+SELECT firstname, lastname FROM students
+JOIN studentcourses ON studentcourses.studentid = students.studentid
+WHERE courseid = (SELECT courseid FROM courses WHERE coursename = 'История') AND age = 20;
+```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/5a55b3e5-17b9-4431-944b-de126093d573)
