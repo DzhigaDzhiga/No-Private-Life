@@ -40,9 +40,23 @@ WHERE courseid = (SELECT courseid FROM courses WHERE coursename = 'Истори�
 SELECT coursename, (SELECT COUNT(studentid) FROM studentcourses
 WHERE c.courseid = studentcourses.courseid) FROM courses c; 
 ```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/e514527a-da1a-42d4-919a-0ebc94aacdd3)
 
 
 ### Вывести средний возраст студентов
 ```sql
-
+SELECT avg(age) AS avg_age FROM students;
 ```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/f44285ca-1d28-4695-a546-437ee4e5643e)
+
+## Вывести имена и фамилии студентов, которые не учатся ни на одном из курсов
+```sql
+SELECT firstname, lastname, studentid FROM students
+WHERE studentid not IN (SELECT studentid FROM studentcourses);
+```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/d81a5e4d-f8c1-4908-ab42-78d63a9aa984)
+
+
+
+
+
