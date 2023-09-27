@@ -63,6 +63,13 @@ ORDER BY count DESC;
 ```
 ![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/ab0044f9-1b17-4c64-8b95-006b5f736bf5)
 
+## №10 Вывести имена и фамилии студентов, которые не старше 22 лет и учатсяна курсе "Биология"
+```sql
+SELECT firstname, lastname FROM students
+JOIN studentcourses ON studentcourses.studentid = students.studentid
+WHERE courseid = (select courseid FROM courses WHERE coursename = 'Биология') AND age >= 22;
+```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/1324953a-fec8-43e6-8774-175af12289f6)
 
 
 
