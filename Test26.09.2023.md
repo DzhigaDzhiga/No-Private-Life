@@ -59,9 +59,11 @@ WHERE studentid not IN (SELECT studentid FROM studentcourses);
 ## 9 Вывести список курсов и количество студентов на каждом курсе, даже если на курсе нет студентов
 ```sql
 SELECT coursename, (SELECT count(studentid) FROM studentcourses
-WHERE c.courseid = studentcourses.courseid) FROM courses c;
+WHERE c.courseid = studentcourses.courseid) FROM courses c
+ORDER BY count DESC; 
 ```
-![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/91e614cc-2869-43e4-801f-a98f92bf66a6)
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/ab0044f9-1b17-4c64-8b95-006b5f736bf5)
+
 
 
 
