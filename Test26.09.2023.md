@@ -68,9 +68,29 @@ ORDER BY count DESC;
 ```sql
 SELECT firstname, lastname FROM students
 JOIN studentcourses ON studentcourses.studentid = students.studentid
-WHERE courseid = (select courseid FROM courses WHERE coursename = 'Биология') AND age >= 22;
+WHERE courseid = (SELECT courseid FROM courses WHERE coursename = 'Биология') AND age >= 22;
 ```
 ![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/1324953a-fec8-43e6-8774-175af12289f6)
 
+## Задания на «5»:
+### №1 Вывести список курсов и количество студентов на каждом курсе, но только для курсов, на которых учится более двух студентов
+```sql
+SELECT 	c.coursename, COUNT(sc.studentid) AS amount_students FROM courses c
+JOIN studentcourses sc ON c.courseid = sc.courseid
+GROUP BY c.coursename
+HAVING (COUNT(sc.studentid)) >= 2;
+```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/87aacfa3-89bf-4705-ade9-b58e6f891436)
 
+### №3 Вывести имена и фамилии студентов, которые учатся на курсах, на которых нет других студентов
+```sql
+SELECT firstname, lastname FROM students
+WHERE (SELECT COUNT(studentid) FROM studentcourses) = (SELECT COUNT(coursename) FROM courses);
+```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/f5d2d001-4a34-43cf-a9eb-c66dfd75be2b)
 
+### №5 Вывести список курсов, на которых нет студентов.
+```sql
+SELECT coursename FROM courses WHERE courseid NOT IN (SELECT courseid FROM studentcourses)
+```
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/5136f66f-97aa-40f2-907e-7ffc48b05c21)
