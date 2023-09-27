@@ -45,7 +45,7 @@ WHERE c.courseid = studentcourses.courseid) FROM courses c;
 
 ### Вывести средний возраст студентов
 ```sql
-SELECT avg(age) AS avg_age FROM students;
+SELECT AVG(age) AS age FROM students;
 ```
 ![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/f44285ca-1d28-4695-a546-437ee4e5643e)
 
