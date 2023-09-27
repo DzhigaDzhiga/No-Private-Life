@@ -33,7 +33,7 @@ SELECT firstname, lastname FROM students
 JOIN studentcourses ON studentcourses.studentid = students.studentid
 WHERE courseid = (SELECT courseid FROM courses WHERE coursename = 'История') AND age = 20;
 ```
-![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/5a55b3e5-17b9-4431-944b-de126093d573)
+![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/178335af-f917-480a-9e2e-b131ad49f6df)
 
 ###   Вывести количество студентов на каждом курсе
 ```sql
