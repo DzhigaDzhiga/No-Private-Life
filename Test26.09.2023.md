@@ -42,3 +42,8 @@ JOIN studentcourses ON studentcourses.studentid = students.studentid
 WHERE courseid = (SELECT courseid FROM courses WHERE coursename = 'История') AND age = 20;
 ```
 ![image](https://github.com/DzhigaDzhiga/No-Private-Life/assets/144116592/5a55b3e5-17b9-4431-944b-de126093d573)
+
+### Вывести средний возраст студентов
+```sql
+
+```
